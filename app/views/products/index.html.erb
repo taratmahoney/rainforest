@@ -1,0 +1,7 @@
+<h1>Products</h1>
+<%= link_to "Create a new product", new_product_url %>
+
+<% @products.each do |product| %>
+  <h2><%= link_to product.name, "/products/#{product.id}" %>, <%= product.price_in_cents %> cents</h2>
+  <p><%= product.description%></p>
+<% end %>
