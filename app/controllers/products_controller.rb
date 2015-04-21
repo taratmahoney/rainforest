@@ -7,6 +7,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+
+    @review = @product.reviews.build if current_user
   end
 
   def new
