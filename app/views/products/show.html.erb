@@ -1,6 +1,6 @@
 
 <%= link_to "Back to products", products_url %>
 
-<h1><%=@product.name %>, <%=@product.price_in_cents %> cents</h1> <%= link_to "EDIT", edit_product_url %>
+<h1><%=@product.name %>, $<%=@product.formatted_price %> </h1> <%= link_to "EDIT", edit_product_url %>
 </p><%= @product.description %></p>
 
