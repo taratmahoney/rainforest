@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get 'products/index'
 
-  get 'products/show'
 
-  get 'products/new'
+  root 'products#index'
+  #resources :sessions, :only => [:create]
 
-  get 'products/edit'
+  #get "/login" => "sessions#new"
+  #delete "/logout" => "sessions#destroy"
 
-root 'products#index'
-resources :products
+  resources :products
+  resources :users, only: [:create, :new]
 
 end
